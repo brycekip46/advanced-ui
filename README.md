@@ -3,4 +3,4 @@ It is a starting page of a game incoperates use of fragment shadders and animati
 Prvides a cool interface that is relatively exciting to use.
 
 #Screenshots
-screenshots/Screenshot.png
+<img src="screenshots/Screenshot.png">
