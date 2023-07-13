@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:next_gen_ui/assets.dart';
 import 'package:next_gen_ui/styles.dart';
+import 'package:next_gen_ui/title/partical_overlaye.dart';
 import 'package:next_gen_ui/title/title_ui.dart';
 import 'package:next_gen_ui/orb_shader/orb_shader_widget.dart';
 
@@ -179,6 +180,12 @@ class _Title_screenState extends State<Title_screen>
                         pulseEffect: _pulseEffect,
                       ),
 
+                      Positioned.fill(
+                          child: IgnorePointer(
+                        child: ParticalOverlay(
+                            color: orbColor, energy: _orbEngery),
+                      )),
+
                       //fore ground
 
                       Image.asset(AssetPaths.titleFgBase),
@@ -224,7 +231,6 @@ class _Litimage extends StatelessWidget {
       required this.pulseEffect});
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     final hsl = HSLColor.fromColor(color);
     return ListenableBuilder(
       listenable: pulseEffect,
